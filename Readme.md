@@ -5,7 +5,9 @@
 
 ![](http://i.giphy.com/5WQTGtSepBela.gif)
 
-```
+## Quickstart
+
+```go
 import "github.com/ivolo/go-giphy"
 
 c := giphy.New("dc6zaTOxFJmzC")
