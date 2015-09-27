@@ -17,7 +17,7 @@ import "github.com/ivolo/go-giphy"
 c := giphy.New("dc6zaTOxFJmzC")
 []gifs, err = c.Search("simpsons ralph")
 
-// gifs[25].Url -> http://giphy.com/gifs/ApEe3sVnOcHde
+// gifs[25].URL -> http://giphy.com/gifs/ApEe3sVnOcHde
 ```
 
 ![](http://i.giphy.com/ApEe3sVnOcHde.gif)

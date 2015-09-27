@@ -19,6 +19,6 @@ func TestSearch(t *testing.T) {
 
   t.Log(fmt.Sprintf("found %d gifs", len(gifs)))
   for i, gif := range(gifs) {
-    t.Log(fmt.Sprintf("gif %d: %s", i, gif.Url))
+    t.Log(fmt.Sprintf("gif %d: %s", i, gif.URL))
   }
 }

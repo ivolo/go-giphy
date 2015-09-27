@@ -14,7 +14,7 @@ const (
   Endpoint = "http://api.giphy.com"
 )
 
-// a Giphy client
+// Client is a Giphy API client
 type Client struct {
   Verbose bool
   Key     string
