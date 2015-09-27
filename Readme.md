@@ -9,6 +9,8 @@ It's also my first Go library. :octopus:
 
 ## Quickstart
 
+#### Search
+
 ```go
 import "github.com/ivolo/go-giphy"
 
