@@ -1,9 +1,11 @@
 
-# go-gighy
+# go-giphy
 
- [Giphy](http://giphy.com/gifs/reaction-the-simpsons-5WQTGtSepBela) [API](https://github.com/giphy/GiphyAPI) from golang.
+ A go client for the [Giphy](http://giphy.com/gifs/reaction-the-simpsons-5WQTGtSepBela) [API](https://github.com/giphy/GiphyAPI).
 
 ![](http://i.giphy.com/5WQTGtSepBela.gif)
+
+It's also my first Go library. :octopus:
 
 ## Quickstart
 
