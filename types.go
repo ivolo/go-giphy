@@ -1,10 +1,16 @@
 package giphy
 
 // SearchResponse is the response on the Giphy API search
-type SearchResponse struct {  
-    Data       []Gif      `json:"data"`
-    Meta       Meta       `json:"meta"`
-    Pagination Pagination `json:"pagination"`
+type SearchResponse struct {
+  Data       []Gif      `json:"data"`
+  Meta       Meta       `json:"meta"`
+  Pagination Pagination `json:"pagination"`
+}
+
+// TranslateResponse is the response on the Giphy API search
+type TranslateResponse struct {
+  Data       Gif  `json:"data"`
+  Meta       Meta `json:"meta"`
 }
 
 // Meta represents the API responds

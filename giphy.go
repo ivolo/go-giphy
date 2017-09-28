@@ -49,9 +49,32 @@ func (c *Client) Search(query string) ([]Gif, error) {
   return s.Data, nil
 }
 
+// Translate the Giphy API for `query`.
+func (c *Client) Translate(query string) (*Gif, error) {
+  u := fmt.Sprintf("%s/v1/gifs/translate?s=%s&api_key=%s", Endpoint, url.QueryEscape(query), c.Key)
+  c.log("translate '%s' -> GET %s", query, u)
+  res, err := http.Get(u)
+  if err != nil {
+    return nil, err
+  }
+  defer res.Body.Close()
+  body, err := ioutil.ReadAll(res.Body)
+  if err != nil {
+    return nil, err
+  }
+  if res.StatusCode != 200 {
+    c.log("error response '%d' -> %s", res.StatusCode, string(body))
+  }
+  var s TranslateResponse
+  if err := json.Unmarshal(body, &s); err != nil {
+    return nil, err
+  }
+  return &s.Data, nil
+}
+
 // Log a `msg`.
 func (c *Client) log(msg string, args ...interface{}) {
   if c.Verbose {
-    log.Printf("giphy: " + msg, args)
+    log.Printf("giphy: " + msg, args...)
   }
 }
