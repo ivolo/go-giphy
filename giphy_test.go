@@ -22,3 +22,13 @@ func TestSearch(t *testing.T) {
     t.Log(fmt.Sprintf("gif %d: %s", i, gif.URL))
   }
 }
+
+func TestTranslate(t *testing.T) {
+  c := setup()
+  gif, err := c.Translate("simpsons ralph")
+  if err != nil {
+    t.Fatal("error translating:", err)
+  }
+
+  t.Log(fmt.Sprintf("gif: %s", gif.URL))
+}
