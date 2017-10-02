@@ -1,15 +1,11 @@
-
 # go-giphy
 
- A go client for the [Giphy](http://giphy.com/gifs/reaction-the-simpsons-5WQTGtSepBela) [API](https://github.com/giphy/GiphyAPI).
+ A go client for the [Giphy API](https://github.com/giphy/GiphyAPI).
 
-![](http://i.giphy.com/5WQTGtSepBela.gif)
-
-It's also my first Go library. :octopus:
 
 ## Quickstart
 
-#### Search
+### [Search](https://developers.giphy.com/docs/#operation--gifs-search-get)
 
 ```go
 import "github.com/ivolo/go-giphy"
@@ -20,4 +16,13 @@ c := giphy.New("dc6zaTOxFJmzC")
 // gifs[25].URL -> http://giphy.com/gifs/ApEe3sVnOcHde
 ```
 
-![](http://i.giphy.com/ApEe3sVnOcHde.gif)
+### [Translate](https://developers.giphy.com/docs/#operation--gifs-translate-get)
+
+```go
+import "github.com/ivolo/go-giphy"
+
+c := giphy.New("dc6zaTOxFJmzC")
+gif, err = c.Translate("simpsons ralph")
+
+// gif.URL -> http://giphy.com/gifs/ApEe3sVnOcHde
+```
